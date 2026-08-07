@@ -50,12 +50,12 @@ export default function TextForm(props) {
          <h3>Welcome!</h3>
          <label htmlFor="notes">Enter text to Analyze :</label>
          <textarea id="notes" value={text} onChange={handleChange}></textarea>
-         <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
-         <button className="btn btn-primary" onClick={handleLowClick}>Convert to Lowercase</button>
-         <button className="btn btn-primary" onClick={handleCopy}>Copy Text</button>
-         <button className="btn btn-primary" onClick={handlePaste}>Paste Text</button>
-         <button className="btn btn-primary" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
-          <button type="button" className="btn btn-light" onClick={handleClearClick}>Clear text</button>
+         <button className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Uppercase</button>
+         <button className="btn btn-primary mx-1 my-1" onClick={handleLowClick}>Convert to Lowercase</button>
+         <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>Copy Text</button>
+         <button className="btn btn-primary mx-1 my-1" onClick={handlePaste}>Paste Text</button>
+         <button className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+         <button type="button" className="btn btn-light mx-1 my-1" onClick={handleClearClick}>Clear text</button>
          <div className="page-container">
   <h2>Your text summary</h2>
   <p>{text.trim().split(/\s+/).filter((e) => e.length !== 0).length} words and {text.length} characters</p>
