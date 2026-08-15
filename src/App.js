@@ -4,14 +4,13 @@ import TextForm from './TextForm';
 import About from './About';
 import Alert from './Alert';
 import FAQ from './FAQ';
-//import logo from './logo.svg';
 import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
-
+//import logo from './logo.svg';
 function App(props) {
   const [alert, setAlert] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
@@ -31,7 +30,7 @@ function App(props) {
       <Router>
         <NavBar h2="Techno" toggleMode={() => setDarkMode(!darkMode)} mode={darkMode ? 'dark' : 'light'} />
         <Alert alert={alert} />
-        {/* Define routes */}
+        
         <Routes>
           <Route exact path="/about" element={<About mode={darkMode ? 'dark' : 'light'} />} />
           <Route

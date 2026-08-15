@@ -11,7 +11,6 @@ export default function NavBar(props) {
         <li><Link to="/faq">FAQ</Link></li>
       </ul>
 
-      {/* Right side: dark mode toggle */}
       <div className="form-check form-switch">
         <input
           className="form-check-input"

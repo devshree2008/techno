@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function About(props) {
-    // Dynamic theme styling for cards to ensure high contrast in both modes
     let cardStyle = {
         color: props.mode === 'dark' ? 'white' : '#042743',
         backgroundColor: props.mode === 'dark' ? '#13466e' : 'white',
@@ -14,7 +13,6 @@ export default function About(props) {
             color: props.mode === 'dark' ? 'white' : '#042743' 
         }}>
             <div className="container">
-                {/* Header Section */}
                 <div className="text-center mb-5">
                     <h1 className="fw-bold display-5 mb-2">About TechText</h1>
                     <p className={`fs-5 ${props.mode === 'dark' ? 'text-light opacity-75' : 'text-muted'}`}>
@@ -22,7 +20,6 @@ export default function About(props) {
                     </p>
                 </div>
 
-                {/* Cards Layout */}
                 <div className="row g-4">
                     {/* Mission Card */}
                     <div className="col-md-4">
@@ -34,7 +31,6 @@ export default function About(props) {
                         </div>
                     </div>
 
-                    {/* Features Card */}
                     <div className="col-md-4">
                         <div className="p-4 rounded shadow-sm h-100" style={cardStyle}>
                             <h3 className="h5 fw-bold mb-3 text-primary">⚡ What We Offer</h3>
@@ -44,7 +40,6 @@ export default function About(props) {
                         </div>
                     </div>
 
-                    {/* Engineering Card */}
                     <div className="col-md-4">
                         <div className="p-4 rounded shadow-sm h-100" style={cardStyle}>
                             <h3 className="h5 fw-bold mb-3 text-primary">💻 Built For Performance</h3>

@@ -13,15 +13,13 @@ export default function FAQ(props) {
             color: props.mode === 'dark' ? 'white' : '#042743' 
         }}>
             <div className="container">
-                {/* Header Section */}
                 <div className="text-center mb-5">
                     <h1 className="fw-bold display-5 mb-2">Frequently Asked Questions</h1>
                     <p className={`fs-5 ${props.mode === 'dark' ? 'text-light opacity-75' : 'text-muted'}`}>
                         Got questions about TechText? Find answers below.
                     </p>
                 </div>
-
-                {/* FAQ Cards / Accordion Items */}
+                
                 <div className="row justify-content-center">
                     <div className="col-md-8">
                         <div className="p-4 rounded shadow-sm mb-3" style={cardStyle}>

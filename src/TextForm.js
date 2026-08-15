@@ -3,19 +3,12 @@ import './App.css';
 
 export default function TextForm(props) {
   const [text, setText] = useState('');
-  const [alertMessage, setAlertMessage] = useState(null);
 
-  const showAlert = (message) => {
-        setAlertMessage(message);
-        setTimeout(() => {
-            setAlertMessage(null);
-        }, 2000);
-    }
   const handleUpClick = () => {
     console.log("Uppercase was clicked" + text);
     let newText = text.toUpperCase();
     setText(newText);
-    showAlert("Converted to Uppercase!","success");
+    props.showAlert("Converted to Uppercase!","success");
   }
   const handleLowClick = () => {
     console.log("Lowercase was clicked" + text);
