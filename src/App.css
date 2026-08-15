@@ -22,7 +22,7 @@
   list-style: none;
   display: flex;
   gap: 20px;
-  margin: 0;
+  margin: 0 0 0 16px;
   padding: 0;
 }
 
@@ -48,13 +48,15 @@
 }
 
 .tech-text {
-  font-family: 'Garamond', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #007bff;
-  
-  letter-spacing: 1px;
-  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #007bff 0%, #6610f2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  margin: 0 0 0 16px;
 }
 
 /* Home Container */

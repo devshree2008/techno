@@ -1,25 +1,60 @@
 import React from 'react';
 
-export default function About() {
-  return (
-    <div className="page-container">
-      <h3>About Us</h3>
-      <p>
-        Welcome to our application! We are passionate about building tools that
-        make text analysis simple and effective. Our mission is to help users
-        transform and understand their text with ease.
-      </p>
-      <h3>Our Vision</h3>
-      <p>
-        We aim to provide intuitive features like case conversion, word count,
-        character count, and reading time estimation — all in one place.
-      </p>
-      <h3>Our Team</h3>
-      <p>
-        Built by a small team of developers who love React and modern web
-        technologies. We believe in clean design, usability, and continuous
-        improvement.
-      </p>
-    </div>
-  );
+export default function About(props) {
+    // Dynamic theme styling for cards to ensure high contrast in both modes
+    let cardStyle = {
+        color: props.mode === 'dark' ? 'white' : '#042743',
+        backgroundColor: props.mode === 'dark' ? '#13466e' : 'white',
+        border: props.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.15)' : '1px solid rgba(0, 0, 0, 0.15)'
+    };
+
+    return (
+        <div className="container-fluid min-vh-100 py-4" style={{ 
+            backgroundColor: props.mode === 'dark' ? '#042743' : 'white', 
+            color: props.mode === 'dark' ? 'white' : '#042743' 
+        }}>
+            <div className="container">
+                {/* Header Section */}
+                <div className="text-center mb-5">
+                    <h1 className="fw-bold display-5 mb-2">About TechText</h1>
+                    <p className={`fs-5 ${props.mode === 'dark' ? 'text-light opacity-75' : 'text-muted'}`}>
+                        Empowering developers and writers with lightning-fast text analysis tools.
+                    </p>
+                </div>
+
+                {/* Cards Layout */}
+                <div className="row g-4">
+                    {/* Mission Card */}
+                    <div className="col-md-4">
+                        <div className="p-4 rounded shadow-sm h-100" style={cardStyle}>
+                            <h3 className="h5 fw-bold mb-3 text-primary">🎯 Our Mission</h3>
+                            <p className="mb-0">
+                                We are passionate about building seamless utilities that simplify everyday text manipulation. Our goal is to provide a clean, clutter-free workspace for quick edits and deep insights.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Features Card */}
+                    <div className="col-md-4">
+                        <div className="p-4 rounded shadow-sm h-100" style={cardStyle}>
+                            <h3 className="h5 fw-bold mb-3 text-primary">⚡ What We Offer</h3>
+                            <p className="mb-0">
+                                From instant case converters (Title, Sentence, camelCase, snake_case) to real-time word counting, character metrics, and reading time estimation—all in one responsive application.
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Engineering Card */}
+                    <div className="col-md-4">
+                        <div className="p-4 rounded shadow-sm h-100" style={cardStyle}>
+                            <h3 className="h5 fw-bold mb-3 text-primary">💻 Built For Performance</h3>
+                            <p className="mb-0">
+                                Engineered using modern React principles, state hooks, and responsive design systems to guarantee smooth cross-platform performance and optimal accessibility.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
